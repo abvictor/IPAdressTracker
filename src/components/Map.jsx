@@ -1,22 +1,33 @@
+import {useContext} from 'react';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import Map,{GeolocateControl, Marker}  from 'react-map-gl';
+
+import {useResultsContext} from '../hooks/useResultsContext'
+
+const MapView=()=> {
+  const {newLocation} = useContext(useResultsContext)
 
 
+ 
 
-
-const Map = ()=>{
-  return(
-  
-
-    <div className="bg-blue-900 w-100% h-[695px]">
-
+  return (
+    <div>
+      <Map
+        mapboxAccessToken='pk.eyJ1IjoiYmVudG92eXNraSIsImEiOiJjbDZkd3h1bDgwMncyM3BvM29rbzJqdDRkIn0.hbVuMcnuFzy4Jy5DL3G5BQ'
+        style={{width: "100%",height: "697px",}} 
+        mapStyle="mapbox://styles/mapbox/streets-v11"
+                
+      >
+     {/* <Marker 
+      latitude={newMarkerLocation.newLat}
+      longitude={newMarkerLocation.newLng}
+     /> */}
+      </Map> 
     </div>
 
-  )
+  );
 }
-
-export default Map;
-
-
-
+export default MapView;
 
 
 
