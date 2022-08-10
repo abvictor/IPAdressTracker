@@ -22,21 +22,21 @@ export const HookUseContext = ({ children }) => {
   const userData = { newData, ip: { searchIp, setIpSearch: setIpSearch } };
 
   useEffect(() => {
-    fetch(`https://ip-api.com/json/${searchIp}`)
+    fetch(`http://ipwho.is/${searchIp}`)
       .then((res) => res.json())
       .then((data) => {
         const result = {
-          ip: data.query,
+          ip: data.ip,
           location: {
-            region: data.region,
-            city: data.regionName,
+            region: data.region_code,
+            city: data.city,
             coords: {
-              lat: data.lat,
-              lng: data.lon,
+              lat: data.latitude,
+              lng: data.longitude,
             },
           },
-          timezone: data.timezone,
-          isp: data.isp,
+          timezone: data.timezone.utc,
+          isp: data.connection.isp,
         };
         setNewData(result);
       });
