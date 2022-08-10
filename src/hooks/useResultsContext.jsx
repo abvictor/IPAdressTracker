@@ -22,7 +22,7 @@ export const HookUseContext = ({ children }) => {
   const userData = { newData, ip: { searchIp, setIpSearch: setIpSearch } };
 
   useEffect(() => {
-    fetch(`http://ip-api.com/json/${searchIp}`)
+    fetch(`https://ip-api.com/json/${searchIp}`)
       .then((res) => res.json())
       .then((data) => {
         const result = {
