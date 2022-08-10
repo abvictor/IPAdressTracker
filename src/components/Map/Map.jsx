@@ -10,8 +10,7 @@ const MapView = () => {
   return (
     <div className={styles.map_container}>
       <Map
-        mapboxAccessToken="pk.eyJ1IjoiYmVudG92eXNraSIsImEiOiJjbDZkd3h1bDgwMncyM3BvM29rbzJqdDRkIn0.hbVuMcnuFzy4Jy5DL3G5BQ"
-        style={{ width: "100%", height: "697px" }}
+        mapboxAccessToken="pk.eyJ1IjoiYmVudG92eXNraSIsImEiOiJja3Fmcm1kZjgxeDlnMzBtbzByMDNodjhzIn0.o_rfX3ostxTHJoN97jO-2g"
         mapStyle="mapbox://styles/mapbox/streets-v11"
         initialViewState={
           (userData.newData.location.coords.lat,
