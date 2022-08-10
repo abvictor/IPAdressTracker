@@ -6,13 +6,14 @@ import styles from "../src/styles/app.module.css";
 import MapView from "../src/components/Map/Map";
 import Results from "../src/components/Result/Results";
 import "react-toastify/dist/ReactToastify.min.css";
+import background from "./assets/background.png";
 import { HookUseContext } from "./hooks/useResultsContext";
 
 function App() {
   return (
     <HookUseContext>
       <Results />
-      <img src="/src/assets/pattern-bg.png" className={styles.img} />
+      <img src={background} className={styles.img} />
       <MapView />
     </HookUseContext>
   );
