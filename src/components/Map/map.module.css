@@ -1,0 +1,8 @@
+.map_container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 707px;
+  z-index: 0;
+}

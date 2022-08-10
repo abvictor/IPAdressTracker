@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export const useResultsContext = createContext();
 
@@ -21,7 +22,6 @@ export const HookUseContext = ({ children }) => {
   const userData = { newData, ip: { searchIp, setIpSearch: setIpSearch } };
 
   useEffect(() => {
-    console.log("oie");
     fetch(`http://ip-api.com/json/${searchIp}`)
       .then((res) => res.json())
       .then((data) => {
