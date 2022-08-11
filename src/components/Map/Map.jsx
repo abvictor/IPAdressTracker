@@ -12,10 +12,6 @@ const MapView = () => {
       <Map
         mapboxAccessToken="pk.eyJ1IjoiYmVudG92eXNraSIsImEiOiJja3Fmcm1kZjgxeDlnMzBtbzByMDNodjhzIn0.o_rfX3ostxTHJoN97jO-2g"
         mapStyle="mapbox://styles/mapbox/streets-v11"
-        initialViewState={
-          (userData.newData.location.coords.lat,
-          userData.newData.location.coords.lng)
-        }
       >
         <Marker
           latitude={userData.newData.location.coords.lat}

@@ -12,6 +12,7 @@ import { HookUseContext } from "./hooks/useResultsContext";
 function App() {
   return (
     <HookUseContext>
+      <ToastContainer />
       <Results />
       <img src={background} className={styles.img} />
       <MapView />
