@@ -13,7 +13,10 @@ function App() {
   return (
     <HookUseContext>
       <ToastContainer />
+      <div className={styles.results_container}>
+        
       <Results />
+      </div>
       <img src={background} className={styles.img} />
       <MapView />
     </HookUseContext>

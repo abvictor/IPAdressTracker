@@ -28,11 +28,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  width: 3rem;
+  height: 2.85rem;
   position: absolute;
   border-radius: 0px 15px 15px 0px;
-  margin-top: 120px;
+  margin-top: 7.5rem;
   margin-left: 61.2%;
   background-color: black;
   color: white;
@@ -45,14 +45,16 @@
 
 .results_center {
   display: flex;
-  margin-left: 28%;
-  margin-top: 200px;
+  margin-left: 25rem;
+  margin-top: 14rem;
   position: absolute;
   z-index: 1;
 }
 .results_container {
-  width: 900px;
-  height: 120px;
+  display: flex;
+  flex-direction: column;
+  width: 70rem;
+  height: 8rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 1px 2px 1px rgba(128, 128, 128, 0.363);
@@ -61,7 +63,7 @@
 .items_row {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 
   color: black;
 }
@@ -75,148 +77,78 @@
 .items > span {
   display: flex;
   justify-content: flex-start;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: rgb(131, 131, 131);
   margin-top: 8px;
+  
 }
 .items > p {
   display: flex;
   justify-content: center;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   color: rgba(2, 0, 0, 0.808);
-  margin-top: 12px;
+  margin-top: 1rem;
+  
 }
 
-@media (max-width: 414px) {
-  .header > title {
-    margin-top: 2rem;
-    font-size: 2rem;
-  }
-  .input {
-    width: 85%;
-    height: 45px;
-    margin-left: 8%;
-    font-size: 0.75rem;
-  }
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 46px;
-    position: absolute;
-    border-radius: 0px 15px 15px 0px;
-    margin-top: 120px;
-    margin-left: 82.2%;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-  }
+@media (max-width: 915px){
+.input{
+  
+  width: 80%;
+  margin: 7rem 8%;
+  font-size: .8rem;
+ 
+}
+.button{
+  width: 3rem;
+  margin: 7rem 83%;
+ 
+}
+.results_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20rem;
+  margin-left: 2%;
 
-  .results_center {
-    display: flex;
+ 
+  background-color: white;
+  
+  border-radius: 8px;
+  box-shadow: 1px 2px 1px rgba(128, 128, 128, 0.363);
+}
+.results_center {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-left: 0;
+  padding: 1rem;
 
-    margin-left: 25px;
-    margin-top: 200px;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .results_container {
-    display: grid;
-    width: 360px;
-    height: 330px;
-    background-color: white;
-    border-radius: 8px;
-  }
-
-  .items_row {
-    display: grid;
-
-    justify-items: center;
-    text-align: center;
-    color: black;
-    margin-top: 0;
-  }
-
-  .items > span {
-    text-align: center;
-    justify-content: center;
-    font-size: 0.75em;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.603);
-  }
-  .items > p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: black;
-  }
+  width: 90%;
 }
 
-@media (max-width: 375px) {
-  .header > title {
-    margin-top: 2rem;
-    font-size: 2rem;
-  }
-  .input {
-    width: 85%;
-    height: 45px;
-    margin-left: 8%;
-    font-size: 0.75rem;
-  }
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 46px;
-    position: absolute;
-    border-radius: 0px 15px 15px 0px;
-    margin-top: 120px;
-    margin-left: 82%;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-  }
-
-  .results_center {
-    display: flex;
-
-    margin-left: 18px;
-    margin-top: 200px;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .results_container {
-    display: grid;
-    width: 330px;
-    height: 330px;
-    background-color: white;
-    border-radius: 8px;
-  }
-
-  .items_row {
-    display: grid;
-
-    justify-items: center;
-    text-align: center;
-    color: black;
-    margin-top: 0;
-  }
-
-  .items > span {
-    text-align: center;
-    justify-content: center;
-    font-size: 0.75em;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.603);
-  }
-  .items > p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: black;
-  }
+.items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
+.items > span{
+  font-size: .85rem;
+}
+.items > p{
+  font-size: .9rem;
+}
+.items_row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+
+

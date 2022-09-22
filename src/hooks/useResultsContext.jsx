@@ -6,37 +6,37 @@ export const useResultsContext = createContext();
 export const HookUseContext = ({ children }) => {
   const [searchIp, setIpSearch] = useState("");
   const [newData, setNewData] = useState({
-    ip: "",
-    location: {
-      region: "",
-      city: "",
-      coords: {
-        lat: "",
-        lng: "",
-      },
+    ip: '',
+    city: '',
+    region: '',
+    country: '',
+    coords: {
+      lat: '',
+      lng: '',
     },
-    timezone: "",
-    isp: "",
+    timezone: '',
+    isp: '',
+    utc: ''
   });
 
   const userData = { newData, ip: { searchIp, setIpSearch: setIpSearch } };
 
   useEffect(() => {
-    fetch(`http://ipwho.is/${searchIp}`)
+    fetch(`https://ipapi.co/${searchIp}/json/`)
       .then((res) => res.json())
       .then((data) => {
         const result = {
           ip: data.ip,
-          location: {
-            region: data.region_code,
-            city: data.city,
-            coords: {
-              lat: data.latitude,
-              lng: data.longitude,
-            },
+          city: data.city,
+          region: data.region,
+          country: data.country,
+          coords: {
+            lat: data.latitude,
+            lng: data.longitude,
           },
-          timezone: data.timezone.utc,
-          isp: data.connection.isp,
+          timezone: data.timezone,
+          isp: data.org,
+          utc: data.utc_offset
         };
         setNewData(result);
       });

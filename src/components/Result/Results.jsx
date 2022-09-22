@@ -15,13 +15,14 @@ const Results = () => {
 
   function handleInputSubmit() {
     userData.ip.setIpSearch(ip);
-    tip();
+    // tip();
   }
 
-  function tip() {
-    toast.info("Remember, the field must be a valid IP address or domain.");
-  }
+  // // function tip() {
+  // //   toast.info("Remember, the field must be a valid IP address or domain.");
+  // // }
   return (
+   
     <div>
       <header className={styles.header}>
         <title>IP Address Tracker</title>
@@ -46,13 +47,13 @@ const Results = () => {
             <div className={styles.items}>
               <span>LOCATION</span>
               <p>
-                {userData.newData.location.city},{" "}
-                {userData.newData.location.region}
+                {userData.newData.city},{" "}
+                {userData.newData.region}
               </p>
             </div>
             <div className={styles.items}>
               <span>TIMEZONE</span>
-              <p>{userData.newData.timezone}</p>
+              <p>{userData.newData.utc}</p>
             </div>
             <div className={styles.items}>
               <span>ISP</span>
@@ -62,6 +63,7 @@ const Results = () => {
         </article>
       </div>
     </div>
+  
   );
 };
 
