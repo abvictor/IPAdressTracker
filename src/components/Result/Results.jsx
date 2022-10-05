@@ -11,16 +11,29 @@ const Results = () => {
 
   useEffect(() => {
     handleInputSubmit();
+
   }, []);
 
-  function handleInputSubmit() {
+  function handleInputSubmit(e) {
+   
     userData.ip.setIpSearch(ip);
-    // tip();
+    
+    if(ip === undefined || ip.length < 8) {
+      return tip();
+      
+    }
+    if(ip === !Number) {
+     toast.error("STRING DETECTED.");
+      console.log("STRING DETECTED.")
+      
+    }
+    
+    
   }
 
-  // // function tip() {
-  // //   toast.info("Remember, the field must be a valid IP address or domain.");
-  // // }
+  function tip() {
+    toast.info("Remember, the field must be a valid IP address or domain.");
+  }
   return (
    
     <div>
